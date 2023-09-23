@@ -45,12 +45,13 @@ nav ul li a {
     text-transform: uppercase;
     display: block;
 }
+
 main {
-    height: 2000px;
     background: url(img/mainbg.jpg) repeat-x;
     clear: both;
     padding-top: 22px;
 }
+
 button {
     width: 163px;
     text-align: left;
@@ -58,6 +59,7 @@ button {
     border-radius: 4px;
     border: 1px solid #d8d8d8;
 }
+
 #slider {
     height: 340px;
     border: 1px solid #c6c6c6;
@@ -202,39 +204,57 @@ section .newsdiv p {
     background: linear-gradient(to right, #33689b, #3d78b5, #2f6092, #306193);
 }
 
-footer {
-    border-top: 10px;
-    border-color: #4c4c4c;
-    background-color: #333;
+#bgpart{
+    height: 10px;
+    background-color: #4c4c4c;
 }
 
-footer:active{
+footer {
+    height: 173px;
+    border-color: #4c4c4c;
+    background-color: #333;
+    padding: 17px 20px 0 10px;
+}
+
+
+footer::after {
     content: '';
     display: table;
     clear: both;
 }
 
-footer p , .footerlist li a {
-    font: .7rem Helvetica;
+footer p,
+.footerlist li a {
+    font: 12px Helvetica;
     color: #999;
 }
 
-
-.footerlist li  {
-display: inline-block;
+.footerlist .first{
+    border:0;
+    padding-left: 0;
 }
 
-footer .lasttext{
-    display: inline;
+.footerlist li a{
+    border-left: 2px solid #7e7e7e;
+    padding: 0 3px;
 }
 
-.footerright{
-    float: right;
+#firstlist {
+    margin: 8px 0;
 }
+
+.footerlist li {
+    display: inline-block;
+}
+
+.footerright {
+    margin-bottom: 10px;
+}
+
+
+/* Responsive Design */
 
 @media only screen and (min-width: 768px) {
-
-
     nav img {
         float: left;
         width: 20%;
@@ -258,6 +278,8 @@ footer .lasttext{
         float: left;
 
     }
-
+    .footerright {
+        float: right;
+    }
 
 }
